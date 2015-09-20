@@ -1,0 +1,24 @@
+<!doctype html>
+<html id="data-ng-app" data-ng-app="demo">
+<head>
+    <meta charset="utf-8">
+    <title>ui router demo</title>
+</head>
+<body id="index" ng-controller="demoCtrl">
+<div>
+    <h1>index page</h1>
+    <input type="text" ng-model="target">
+    <input type="button" value="goto" ng-click="goto(target)">
+
+    <br/><br/>
+    <i>got command: show following page:</i> <h1>'{{command}}'</h1>
+    <hr>
+</div>
+
+<div id="content" ui-view></div>
+
+<script src="js/libs/angular.js"></script>
+<script src="js/libs/angular-ui-router.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
