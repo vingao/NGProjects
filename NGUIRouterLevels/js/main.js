@@ -13,7 +13,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             templateUrl: 'templates/profile.html'
         })
         .state('users.profile.photo', {
-            url: '/profile',
+            url: '/photo',
             templateUrl: 'templates/photo.html'
         })
         .state('users.account', {
@@ -24,7 +24,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 
 app.controller('demoCtrl', function ($scope, $state) {
     $scope.goto = function (page) {
-        $state.go(page, {replace: true});
+        $state.go(page, {location: true});
     }
 
     $scope.commands = ['users', 'users.profile', 'users.profile.photo', 'users.account'];
